@@ -13,13 +13,13 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-     - name: Release
+    - name: Release
       uses: qcastel/github-actions-maven-release@master
       with:
           version-patch: true
