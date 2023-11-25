@@ -43,7 +43,9 @@ jobs:
 
 
     - name: Package with maven
-      run: mvn package
+      run: |
+        cd myapp
+        mvn package
     
     - name: Create artifact
       # run: mkdir artifact && cp target/*.jar artifact
