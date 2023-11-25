@@ -19,6 +19,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        # fetch-depth: 0
+        version-patch: true
     # - name: Release
     #   uses: qcastel/github-actions-maven-release@master
     #   with:
