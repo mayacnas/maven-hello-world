@@ -37,7 +37,10 @@ jobs:
         cache: maven
 
     - name: Build with Maven
-      run: mvn compile
+      run: |
+      cd myapp
+      mvn compile
+
 
     - name: Package with maven
       run: mvn package
