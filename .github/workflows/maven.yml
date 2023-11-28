@@ -39,7 +39,7 @@ jobs:
         cache: maven
 
     - name: change jar version
-      run: mvn build-helper:parse-version versions:set -DnewVersion=${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.nextIncrementalVersion}
+      run: mvn build-helper:parse-version versions:set -DnewVersion=${MAVEN_PROJECT_VERSION}
 
     - name: Build with Maven
       run: mvn compile
