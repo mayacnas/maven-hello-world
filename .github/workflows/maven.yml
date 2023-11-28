@@ -40,6 +40,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
+    - name: clean maven
+      run: mvn clean
+
     - name: change jar version
       run: mvn build-helper:parse-version versions:set -DnewVersion=${MAVEN_PROJECT_VERSION}
 
