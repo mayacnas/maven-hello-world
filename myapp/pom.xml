@@ -80,4 +80,11 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <repository>
+        <id>maven-hello-world</id>
+        <url>https://github.com/mayacnas/maven-hello-world.git/releases</url>
+    </repository>
+</distributionManagement>
 </project>
