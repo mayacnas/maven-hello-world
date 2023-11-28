@@ -19,7 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       working-directory: /myapp
-
+    defaults:
+      run:
+        working-directory: ./myapp
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
