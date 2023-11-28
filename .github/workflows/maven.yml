@@ -58,7 +58,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
        name: Package
-       path: artifact
+       path: ./target
 
 
     # - name: Run the Maven verify phase
