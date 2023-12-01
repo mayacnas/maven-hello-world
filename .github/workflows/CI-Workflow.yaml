@@ -56,7 +56,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: my-artifact
-        path: package/
+        path: ./
     # - name: Create artifact
     #   run: mvn --batch-mode deploy
     #   run: mkdir artifact && cp target/*.jar artifact
