@@ -58,7 +58,9 @@ jobs:
     - name: Package with maven
       run: mvn package
    
-
+    - naem: test
+      run: bash -c 'll -al'
+      
     - name: Create artifact
       uses: actions/upload-artifact@v2
       with:
