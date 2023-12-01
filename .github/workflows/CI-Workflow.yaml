@@ -59,4 +59,4 @@ jobs:
         path: ./
 
     - name: build image from docker file
-      run: docker build -t maven-app:${MAVEN_PROJECT_VERSION} -f Dockerfile .
+      run: docker build -t maven-app:${{ MAVEN_PROJECT_VERSION }} -f Dockerfile .
