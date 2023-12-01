@@ -45,6 +45,12 @@ jobs:
     - name: change jar version
       run: mvn build-helper:parse-version versions:set -DnewVersion=${MAVEN_PROJECT_VERSION}
 
+    - name: Get Jar Version
+      id: get_jar_version
+      run: |
+        JAR_VERSION=$(grep -oP '<version>\K[^<]+' pom.xml)
+        echo "JAR_VERSION=${JAR_VERSION}" >> $GITHUB_ENV
+
     - name: Build with Maven
       run: mvn compile
 
@@ -59,4 +65,4 @@ jobs:
         path: ./
 
     - name: build image from docker file
-      run: docker build -t maven-app:${{ env.MAVEN_PROJECT_VERSION }} -f Dockerfile .
+      run: docker build -t maven-app:${{ env.JAR_VERSION }} -f Dockerfile .
