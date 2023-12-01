@@ -7,7 +7,6 @@
 # documentation.
 
 name: Java CI with Maven
-
 on:
   push:
     branches: 
@@ -51,12 +50,13 @@ jobs:
       run: mvn package
    
     - name: Create artifact
-      run: mvn deploy
-      # run: mkdir artifact && cp target/*.jar artifact
-      # uses: actions/upload-artifact@v2
-      # with:
-      #  name: Package
-      #  path: target/myapp-1.0.1.jar
+      # run: mvn deploy
+      run: mkdir artifact && cp target/*.jar artifact
+    
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Package
+        path: artifact
 
 
     # - name: Run the Maven verify phase
