@@ -4,7 +4,7 @@ RUN useradd -m -u 1001 my-user
 
 WORKDIR /app
 
-COPY ./myapp-1.0.1.jar /app/app.jar
+COPY ./target/myapp-1.0.1.jar /app/app.jar
 
 EXPOSE 8080
 
