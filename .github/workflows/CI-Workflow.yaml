@@ -57,14 +57,6 @@ jobs:
       with:
         name: my-artifact
         path: ./
-    # - name: Create artifact
-    #   run: mvn --batch-mode deploy
-    #   run: mkdir artifact && cp target/*.jar artifact
-    
-    # - uses: actions/upload-artifact@v2
-    #   with:
-    #     name: Package
-    #     path: artifact
 
-    # - name: Run the Maven verify phase
-    #   run: mvn --batch-mode --update-snapshots verify
+    - name: build image from docker file
+      run: docker build -t maven-app:${{ env.JAR_VERSION }} -f Dockerfile .
