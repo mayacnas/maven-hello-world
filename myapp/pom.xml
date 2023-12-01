@@ -85,7 +85,7 @@
    <repository>
      <id>github</id>
      <name>Apache Maven Packages</name>
-     <url>https://github.com/mayacnas/maven-hello-world.git</url>
+     <url>https://github.com/mayacnas/maven-hello-world/releases</url>
    </repository>
 </distributionManagement>
 </project>
