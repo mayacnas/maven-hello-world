@@ -12,8 +12,7 @@ on:
     branches: 
       - master
 
-permissions: 
-  packages: write
+permissions: write-all
 
 jobs:
   build:
@@ -52,8 +51,14 @@ jobs:
     - name: Package with maven
       run: mvn package
    
+
     - name: Create artifact
-      run: mvn --batch-mode deploy
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: target/
+    # - name: Create artifact
+    #   run: mvn --batch-mode deploy
     #   run: mkdir artifact && cp target/*.jar artifact
     
     # - uses: actions/upload-artifact@v2
