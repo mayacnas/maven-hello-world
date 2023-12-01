@@ -81,10 +81,11 @@
     </pluginManagement>
   </build>
 
-  <distributionManagement>
-    <repository>
-        <id>maven-hello-world</id>
-        <url>https://github.com/mayacnas/maven-hello-world.git/releases</url>
-    </repository>
+<distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>Apache Maven Packages</name>
+     <url>https://github.com/mayacnas/maven-hello-world.git</url>
+   </repository>
 </distributionManagement>
 </project>
