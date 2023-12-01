@@ -50,7 +50,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
-	  <version>3.0.2</version>
+    <version>3.0.2</version>
           <configuration>
     <archive>
       <manifest>
@@ -80,4 +80,11 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <repository>
+        <id>maven-hello-world</id>
+        <url>https://github.com/mayacnas/maven-hello-world.git/releases</url>
+    </repository>
+</distributionManagement>
 </project>
