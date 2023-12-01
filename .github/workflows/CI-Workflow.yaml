@@ -69,3 +69,9 @@ jobs:
 
     - name: build image from docker file
       run: docker build -t maven-app:1.0.1 -f Dockerfile .
+
+    - name: Create Docker Image
+      run: |
+        docker build -t mayacnas/maven-app:1.0.1 -f Dockerfile .
+        docker login -u mayacnas -p ${{ secrets.DOCKERHUB_TOKEN }}
+        docker push mayacnas/maven-app:1.0.1
