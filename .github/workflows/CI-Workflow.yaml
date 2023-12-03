@@ -57,9 +57,6 @@ jobs:
 
     - name: Package with maven
       run: mvn package
-   
-    - name: test
-      run: bash -c 'ls -al'
 
     - name: Create artifact
       uses: actions/upload-artifact@v2
